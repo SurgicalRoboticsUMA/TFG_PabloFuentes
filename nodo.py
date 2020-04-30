@@ -50,7 +50,6 @@ def conversion():
     rospy.init_node('conversion', anonymous=True)
     pub = rospy.Publisher('/UR3_1/inputs/move_pose', FM, queue_size=10)
     rospy.Subscriber("UR3_1/outputs/pose", FM, callback1)
-    #rospy.Subscriber('phantom', String, callback2)
     rate = rospy.Rate(10) # 10hz
 
     while not rospy.is_shutdown():
